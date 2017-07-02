@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeServer2"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:layout_height="match_parent">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_empty_server"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+        <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/imgEmptyListServer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/hux_logo"
+            android:src="@drawable/ic_hux_empty_list" />
+
+        <TextView
+            android:id="@+id/txt_empty_view_server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_server" />
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutProgressServer"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+        <ProgressBar
+            android:id="@+id/progressServer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeServer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listServer"
+            android:name="org.lamorim.huxflooderapp.TaskFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="org.lamorim.huxflooderapp.fragment.ServerFragment"
+            tools:listitem="@layout/server_item" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

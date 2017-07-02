@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/session_actions" android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_flood"
+            android:icon="@mipmap/ic_flood"
+            android:title="@string/nav_flood" />
+        <item
+            android:id="@+id/nav_testcase"
+            android:icon="@mipmap/ic_testcase"
+            android:title="@string/test_case"/>
+    </group>
+
+    <item android:title="@string/configure">
+        <menu>
+            <group android:id="@+id/session_confifure" android:checkableBehavior="all">
+            <item
+                android:id="@+id/nav_servers"
+                android:icon="@drawable/ic_servers"
+                android:title="@string/servers" />
+            <item
+                android:id="@+id/nav_preferences"
+                android:icon="@drawable/ic_configure"
+                android:title="@string/preferences" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

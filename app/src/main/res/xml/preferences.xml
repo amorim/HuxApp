@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/preference_app_category">
+
+        <CheckBoxPreference
+            android:key="checkbox_auto_update"
+            android:title="@string/title_checkbox_auto_update"
+            android:defaultValue="true"
+            android:summary="@string/desc_title_checkbox_auto_update" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/preference_notification_category">
+
+        <CheckBoxPreference
+            android:key="checkbox_notification"
+            android:defaultValue="true"
+            android:title="@string/title_checkbox_notification"
+            android:summary="@string/desc_checkbox_notification" />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
